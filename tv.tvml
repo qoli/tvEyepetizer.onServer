@@ -1,0 +1,24 @@
+<document>
+   <listTemplate>
+      <banner>
+         <title>開眼</title>
+      </banner>
+      <list>
+         <header>
+            <title>最新視頻</title>
+         </header>
+         <section>
+            <listItemLockup>
+               <title>Movie 1</title>
+               <relatedContent>
+                  <lockup>
+                     <img src="path to images on your server/Car_Movie_1920x1080.png" width="857" height="482" />
+                     <title>Movie 1</title>
+                     <description>A brief description for the first movie should go here.</description>
+                  </lockup>
+               </relatedContent>
+            </listItemLockup>
+         </section>
+      </list>
+   </listTemplate>
+</document>
