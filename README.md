@@ -15,3 +15,7 @@ tvml version.
 ## 入口
 
 tv.php
+
+## xcode
+
+以 apple tvml 示例模板即可。地址替換為上文入口位置。
