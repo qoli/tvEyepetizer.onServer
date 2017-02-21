@@ -2,15 +2,22 @@
 set_include_path(get_include_path() . PATH_SEPARATOR . 'phpseclib');
 require 'Net/SSH2.php';
 require 'MainFunction.php';
+
+// 透過 SSH 連接到 VPS
 $ssh = new Net_SSH2('47.89.42.250');
-if (!$ssh->login('root', 'Gundam12')) {
+if (!$ssh->login('root', 'password')) {
    exit('Login Failed');
 }
+
+// 運行開眼 API
 $json = $ssh->exec('curl -s http://baobab.wandoujia.com/api/v1/feed?num=5');
+
 $API = json_decode($json);
+
 function get_second_to_his($s){
    return str_pad(floor((($s%86400)%3600)/60),2,'0',STR_PAD_LEFT)."' ".str_pad(floor((($s%86400)%3600)%60),2,'0',STR_PAD_LEFT).'"';
 }
+
 ?>
 <document>
 <head>
